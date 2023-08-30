@@ -7,7 +7,7 @@ import { Genre } from './hooks/useGenres'
 
 function App() {
   const [genre, setGenre] = useState<Genre | null>(null)
-  console.log('genre', genre)
+
   return (
     <Grid
       templateAreas={{
@@ -26,6 +26,7 @@ function App() {
         <GridItem area='aside' paddingX={5}>
           <GenreList
             onSelectGenre={(selectedGenre) => setGenre(selectedGenre)}
+            selectedGenre={genre}
           />
         </GridItem>
       </Show>
